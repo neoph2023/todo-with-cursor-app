@@ -81,10 +81,10 @@ export default function TodoList() {
       <header className="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
         <div className="max-w-3xl mx-auto px-6 py-6">
           <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
-            My Tasks
+            Mis tareas
           </h1>
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
-            {completedCount} of {tasks.length} completed
+            {completedCount} de {tasks.length} completadas
           </p>
         </div>
       </header>
@@ -104,7 +104,7 @@ export default function TodoList() {
                   addTask();
                 }
               }}
-              placeholder="Add a new task..."
+              placeholder="Añade una nueva tarea..."
               className="flex-1 px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
             />
             <button
@@ -112,7 +112,7 @@ export default function TodoList() {
               className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium flex items-center gap-2 transition-colors"
             >
               <Plus size={20} />
-              Add
+              Añadir
             </button>
           </div>
 
@@ -120,7 +120,7 @@ export default function TodoList() {
           {tasks.length === 0 ? (
             <div className="text-center py-16">
               <p className="text-slate-500 dark:text-slate-400 text-lg">
-                No tasks yet. Create one to get started!
+                Aún no hay tareas. ¡Crea una para empezar!
               </p>
             </div>
           ) : (
@@ -167,14 +167,14 @@ export default function TodoList() {
                         <button
                           onClick={() => saveEdit(task.id)}
                           className="p-2 text-green-600 hover:bg-green-50 dark:hover:bg-slate-700 rounded transition-colors"
-                          title="Save"
+                          title="Guardar"
                         >
                           <Check size={18} />
                         </button>
                         <button
                           onClick={cancelEdit}
                           className="p-2 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 rounded transition-colors"
-                          title="Cancel"
+                          title="Cancelar"
                         >
                           <X size={18} />
                         </button>
@@ -184,14 +184,14 @@ export default function TodoList() {
                         <button
                           onClick={() => startEdit(task.id, task.title)}
                           className="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 rounded transition-colors"
-                          title="Edit"
+                          title="Editar"
                         >
                           <Edit2 size={18} />
                         </button>
                         <button
                           onClick={() => deleteTask(task.id)}
                           className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-slate-700 rounded transition-colors"
-                          title="Delete"
+                          title="Eliminar"
                         >
                           <Trash2 size={18} />
                         </button>
@@ -210,8 +210,8 @@ export default function TodoList() {
         <div className="max-w-3xl mx-auto px-6 py-4 text-center text-sm text-slate-600 dark:text-slate-400">
           <p>
             {tasks.length > 0
-              ? `${tasks.length} task${tasks.length !== 1 ? 's' : ''} total`
-              : 'Start by adding your first task'}
+              ? `${tasks.length} tarea${tasks.length !== 1 ? 's' : ''} en total`
+              : 'Empieza añadiendo tu primera tarea'}
           </p>
         </div>
       </footer>
